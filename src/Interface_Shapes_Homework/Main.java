@@ -22,19 +22,14 @@ public class Main {
         Shape rectangle = new Rectangle("Rectangle",5,10);
         Shape square = new Square("Square",15);
         Shape circle = new Circle("Circle",10);
-        Shape shape = new Shape("Shape");
 
         Shape[] shapes= {circle,rectangle,square};
+        Arrays.sort(shapes);
 
         System.out.println("Shapes: ");
         for (Shape s : shapes){
             System.out.println(s.getDisplayName()+" has area of "+s.getArea());
         }
-
-
-        Arrays.sort(shapes);
-        System.out.println(Arrays.toString(shapes));
-
        /* Output:
         Shapes:
         Circle has area of 314.0
