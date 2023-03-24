@@ -19,8 +19,10 @@ public class ShapeCalculatorTest {
     @Test
     @DisplayName("Sum all areas")
     void totalSquare() {
-        assertEquals (589.0, calculatorArea.totalSquare (314.0, 50.0,225.0));
+        assertEquals (589.0, calculatorArea.totalSquare (314.0, 50.0,225.0)); // Tests passed 1
 
+
+            // Areas of shapes
         //   Circle has area of 314.0
         //   Rectangle has area of 50.0
         //   Square has area of 225.0
