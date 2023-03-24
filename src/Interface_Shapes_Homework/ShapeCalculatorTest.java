@@ -7,19 +7,38 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class ShapeCalculatorTest {
-    ShapeCalculator calculatorArea;
+    ShapeCalculator shapeCalculator;
 
 
     @BeforeEach
-
-    void setUp(){
-       calculatorArea = new ShapeCalculator();
+    void init(){
+       shapeCalculator = new ShapeCalculator();
     }
 
     @Test
-    @DisplayName("Sum all areas")
-    void totalSquare() {
-        assertEquals (589.0, calculatorArea.totalSquare (314.0, 50.0,225.0)); // Tests passed 1
+    public void test_two_shapes() {
+        Shape[] shapes = {new Circle("Circle",10), new Rectangle("Rectanle",5,10)};
+                assertEquals(364, shapeCalculator.totalSquare(shapes));
+
+
+    }
+    @Test
+    public void test_one_shape(){
+        Shape[] shapes = {new Rectangle("Rectangle", 5,10)};
+
+        assertEquals(50, shapeCalculator.totalSquare(shapes));
+    }
+    @Test
+    public void test_zero_shape(){
+        Shape[] shapes ={};
+        assertEquals(0,shapeCalculator.totalSquare(shapes));
+    }
+
+
+
+
+
+    // Tests passed 1
 
 
             // Areas of shapes
@@ -27,5 +46,7 @@ public class ShapeCalculatorTest {
         //   Rectangle has area of 50.0
         //   Square has area of 225.0
 
-    }
 }
+
+
+
